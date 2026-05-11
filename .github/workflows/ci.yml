@@ -13,20 +13,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v6
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
 
-    - name: Se configura JDK 21 (Temurin)
-      uses: actions/setup-java@v5
-      with:
-        distribution: temurin
-        java-version: "21"
-        check-latest: true
-        cache: gradle
+      - name: Se configura JDK 21 (Temurin)
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          check-latest: true
+          cache: gradle
 
-    - name: Asegura que gradlew sea ejecutable
-      run: chmod +x ./gradlew
+      - name: Asegura que gradlew sea ejecutable
+        run: chmod +x ./gradlew
 
-    - name: Compilación
-      run: ./gradlew –no-daemon compileJava 
+      - name: Compilación
+        run: ./gradlew –no-daemon compileJava 
