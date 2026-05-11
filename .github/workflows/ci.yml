@@ -24,9 +24,9 @@ jobs:
         java-version: "21"
         check-latest: true
         cache: gradle
-        
+
     - name: Asegura que gradlew sea ejecutable
       run: chmod +x ./gradlew
 
     - name: Compilación
-      run: ./gradlew compileJava –no-daemon
+      run: ./gradlew –no-daemon compileJava 
