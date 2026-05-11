@@ -33,3 +33,12 @@ jobs:
 
       - name: Compilación
         run: ./gradlew compileJava --no-daemon
+
+      - name: Pruebas unitarias
+        run: ./gradlew test --no-daemon
+
+      - name: Se sube el informe
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: calculatorGFH/build/reports/tests/test
