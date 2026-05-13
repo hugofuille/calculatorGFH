@@ -30,6 +30,9 @@ jobs:
 
       
 
+      - name: Dar permisos a gradlew
+        run: chmod +x gradlew
+
       - name: Compilación
         run: ./gradlew compileJava --no-daemon
 
